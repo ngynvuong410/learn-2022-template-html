@@ -1,0 +1,351 @@
+json-server --watch db.json<!doctype html>
+<html lang="en">
+  <head>
+    <title>Pets Sho[</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">  
+  
+</head>
+  <body>
+      <header class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="logo">
+                            <img src="https://chopet.vn/static/media/logoweb_450x75_default.dd253c6c.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="search">
+                             <input type="search" name="" id="">
+                             <div class="search-dropdown">
+                                <div class="dropdown">
+                                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                 
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                      <a class="dropdown-item" href="#">Thú cưng</a>
+                                      <a class="dropdown-item" href="#">sản phẩm</a>
+                                    </div>
+                                  </div>
+                             </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="info">
+                            <div class="info-item">
+                                <svg viewBox="0 0 50 50" class="icon"><path d="M41.58,4.06H4.36a3.93,3.93,0,0,0-1.09.15l-.63.33L1.71,5l-.05,0A4.17,4.17,0,0,0,.18,8.23V45.46a4.2,4.2,0,0,0,4.18,4.2H41.58a4.21,4.21,0,0,0,3.48-1.86l.2-.41.34-.75a4.1,4.1,0,0,0,.17-1.18V8.23A4.2,4.2,0,0,0,41.58,4.06ZM4.69,10.32H41.24a1.55,1.55,0,1,1,0,3.1H4.69a1.55,1.55,0,0,1,0-3.1Zm0,8H41.24a1.55,1.55,0,1,1,0,3.09H4.69a1.55,1.55,0,0,1,0-3.09Zm0,8.6H41.24a1.55,1.55,0,1,1,0,3.1H4.69a1.55,1.55,0,0,1,0-3.1Zm0,8.6H36.07a1.55,1.55,0,0,1,0,3.09H4.69a1.55,1.55,0,0,1,0-3.09Z"></path><path d="M49.51,4.42V41.64a4.23,4.23,0,0,1-.17,1.19L48.79,44a4.15,4.15,0,0,1-1.7,1.46,4.09,4.09,0,0,0,.17-1.17V7a4.2,4.2,0,0,0-4.18-4.17H5.85A4.18,4.18,0,0,0,4.74,3l-.69.36A4,4,0,0,1,5.4,1.24l0-.05L7,.4A3.81,3.81,0,0,1,8.1.25H45.32A4.19,4.19,0,0,1,49.51,4.42Z"></path></svg>
+                                <span>Tin Tức</span>
+                            </div>
+                            <div class="info-item">
+                                <svg viewBox="0 0 50 50" class="icon news-icon"><path d="M34.47,47.64H8.92A8.4,8.4,0,0,1,.58,39.31V13.76A8.38,8.38,0,0,1,8.92,5.41H34.45a8.36,8.36,0,0,1,6.71,3.41,8.23,8.23,0,0,1,1.64,4.94V39.3A8.37,8.37,0,0,1,34.47,47.64ZM8.92,7.41a6.38,6.38,0,0,0-6.34,6.35V39.3a6.39,6.39,0,0,0,6.35,6.34H34.46A6.36,6.36,0,0,0,40.8,39.3V13.76A6.19,6.19,0,0,0,39.55,10h0a6.35,6.35,0,0,0-5.1-2.59Z"></path><rect x="6.46" y="12.79" width="32.56" height="1.43" rx="0.47" ry="0.47"></rect><rect x="6.46" y="20.99" width="30.45" height="1.43" rx="0.47" ry="0.47"></rect><rect x="6.46" y="29.2" width="23.74" height="1.43" rx="0.47" ry="0.47"></rect><path d="M36.35,24.84l7.56-9.43.14-.18,1.22-1.52,2.22-2.77-1.75-1.4-1-.78-.24-.18L43,10.48,40.9,13.07l-1,1.25-2,2.46-1.06,1.33-2,2.46-1,1.31-2,2.46-.68.86a1.47,1.47,0,0,0-.27.47,2.13,2.13,0,0,0-.13.93v.09l-.28,1.87-.08.6.22-.08,2.22-.84a1.91,1.91,0,0,0,1.27-.68l1.11-1.39Z"></path><path d="M49,9.22l-.57.72-.09-.11-2.2-1.75-.69-.55L46,6.81a2.54,2.54,0,0,1,.29-.28h0a2,2,0,0,1,2.36,0h0A2,2,0,0,1,49,9.22Z"></path></svg>
+                                <span>Đăng tin</span>
+                            </div>
+                            <div class="info-item">
+                                <svg viewBox="0 0 50 50" class="icon"><path d="M44.37,25.55V45c0,2.79-3,5-6.62,5H12.26c-3.66,0-6.63-2.25-6.63-5V25.55c0-2.78,3-5,6.63-5h2.07a11.42,11.42,0,0,0,21.34,0h2.08C41.4,20.51,44.37,22.77,44.37,25.55Z"></path><path d="M36.42,11.58a11.57,11.57,0,0,1-.23,2.3h0l0,.12h0a11.42,11.42,0,0,1-22.32,0h0l0-.12h0a11.57,11.57,0,0,1-.23-2.3,11.42,11.42,0,0,1,22.84,0Z"></path></svg>
+                                <span>Đăng nhập</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      </header>
+      <section class="box_content">
+        <section class="menu-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <ul class="menu">
+                            <li class="menu-item">
+                                <span>Type name</span>
+                                <ul class="menu-sub">
+                                    <li class="sub-item">item1</li>
+                                    <li class="sub-item">item2</li>
+                                    <li class="sub-item">item3</li>
+                                    <li class="sub-item">item4</li>
+                                </ul>
+                            </li>
+                            <li class="menu-item">
+                                <span>Type name</span>
+                                <ul class="menu-sub">
+                                    <li class="sub-item">item1</li>
+                                    <li class="sub-item">item2</li>
+                                    <li class="sub-item">item3</li>
+                                    <li class="sub-item">item4</li>
+                                </ul>
+                            </li>
+                            <li class="menu-item">
+                                <span>Type name</span>
+                                <ul class="menu-sub">
+                                    <li class="sub-item">item1</li>
+                                    <li class="sub-item">item2</li>
+                                    <li class="sub-item">item3</li>
+                                    <li class="sub-item">item4</li>
+                                </ul>
+                            </li>
+                            <li class="menu-item">
+                                <span>Type name</span>
+                                <ul class="menu-sub">
+                                    <li class="sub-item">item1</li>
+                                    <li class="sub-item">item2</li>
+                                    <li class="sub-item">item3</li>
+                                    <li class="sub-item">item4</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+         </section>
+          <section class="banner">
+               <div class="container-fluid">
+                   <div class="row">
+                       <div class="col-12">
+                           <img src="https://asset.chopet.vn/temps/19-05-2021/157db409258bbdc4a3cc9a571a172cdb875b8746.jpg?t=webp" alt="">
+                       </div>
+                   </div>
+               </div>      
+          </section>
+          <section class="list_cartergory"> 
+              <div class="container">
+                   <h3 class="title">Danh mục thú cưng</h3>
+                  <div class="row catergory">
+                    
+                  
+                      <div class="item-vertical">
+                          <img src="https://asset.chopet.vn/backgrounds/category_home_1.jpg?t=webp&w=220" alt="">
+                          <span>Mua bán thú cưng</span>
+                      </div>
+                      <div class="item-vertical">
+                          <img src="https://asset.chopet.vn/backgrounds/category_home_1.jpg?t=webp&w=220" alt="">
+                          <span>Mua bán thú cưng</span>
+                      </div>
+                      <div class="item-vertical">
+                          <img src="https://asset.chopet.vn/backgrounds/category_home_1.jpg?t=webp&w=220" alt="">
+                          <span>Mua bán thú cưng</span>
+                      </div>
+                      <div class="item-vertical">
+                          <img src="https://asset.chopet.vn/backgrounds/category_home_1.jpg?t=webp&w=220" alt="">
+                          <span>Mua bán thú cưng</span>
+                      </div>
+                      <div class="item-vertical">
+                          <img src="https://asset.chopet.vn/backgrounds/category_home_1.jpg?t=webp&w=220" alt="">
+                          <span>Mua bán thú cưng</span>
+                      </div>
+                      <div class="item-vertical">
+                          <img src="https://asset.chopet.vn/backgrounds/category_home_1.jpg?t=webp&w=220" alt="">
+                          <span>Mua bán thú cưng</span>
+                      </div>
+                      <div class="item-vertical">
+                          <img src="https://asset.chopet.vn/backgrounds/category_home_1.jpg?t=webp&w=220" alt="">
+                          <span>Mua bán thú cưng</span>
+                      </div>
+                      <div class="item-vertical">
+                          <img src="https://asset.chopet.vn/backgrounds/category_home_1.jpg?t=webp&w=220" alt="">
+                          <span>Mua bán thú cưng</span>
+                      </div>
+                  </div>
+              </div>
+          </section>
+          <section class="sider">
+            <div class="container">
+                <div id="carouselId" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselId" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselId" data-slide-to="1"></li>
+                        <li data-target="#carouselId" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <img src="https://asset.chopet.vn/temps/03-03-2021/bc88ca57fcf5cb64d659d13fa16cc0911cb1c2ea.jpg?t=webp" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://asset.chopet.vn/temps/03-03-2021/bc88ca57fcf5cb64d659d13fa16cc0911cb1c2ea.jpg?t=webp" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://asset.chopet.vn/temps/03-03-2021/bc88ca57fcf5cb64d659d13fa16cc0911cb1c2ea.jpg?t=webp" alt="Third slide">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselId" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselId" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+          </section>
+           <section class="list-products">
+               <div class="container">
+                   <div class="row products">
+                       <div class="product-item">
+                           <div class="thumb">
+                               <div class="neo">hot</div>
+                              <img src="https://asset.chopet.vn/temps/06-02-2021/685ad711b42681b3ae62110536249e318e387ac3.jpg?w=300&t=jpg" alt="">
+                           </div>
+                           <div class="product-details">
+                            <h3 class="name">[Sơn La] Phối mèo anh lông ngắn màu xám xanh.</h3>
+                             <p class="price">3000</p>
+                             <div class="position">
+                                 <div class="contry">son la</div>
+                                 <div class="date">19/05/2021</div>
+                             </div>
+                           </div>
+                       </div>
+                       <div class="product-item">
+                           <div class="thumb">
+                               <div class="neo">hot</div>
+                              <img src="https://asset.chopet.vn/temps/06-02-2021/685ad711b42681b3ae62110536249e318e387ac3.jpg?w=300&t=jpg" alt="">
+                           </div>
+                           <div class="product-details">
+                            <h3 class="name">[Sơn La] Phối mèo anh lông ngắn màu xám xanh.</h3>
+                             <p class="price">3000</p>
+                             <div class="position">
+                                 <div class="contry">son la</div>
+                                 <div class="date">19/05/2021</div>
+                             </div>
+                           </div>
+                       </div>
+                       <div class="product-item">
+                           <div class="thumb">
+                               <div class="neo">hot</div>
+                              <img src="https://asset.chopet.vn/temps/06-02-2021/685ad711b42681b3ae62110536249e318e387ac3.jpg?w=300&t=jpg" alt="">
+                           </div>
+                           <div class="product-details">
+                            <h3 class="name">[Sơn La] Phối mèo anh lông ngắn màu xám xanh.</h3>
+                             <p class="price">3000</p>
+                             <div class="position">
+                                 <div class="contry">son la</div>
+                                 <div class="date">19/05/2021</div>
+                             </div>
+                           </div>
+                       </div>
+                       <div class="product-item">
+                           <div class="thumb">
+                               <div class="neo">hot</div>
+                              <img src="https://asset.chopet.vn/temps/06-02-2021/685ad711b42681b3ae62110536249e318e387ac3.jpg?w=300&t=jpg" alt="">
+                           </div>
+                           <div class="product-details">
+                            <h3 class="name">[Sơn La] Phối mèo anh lông ngắn màu xám xanh.</h3>
+                             <p class="price">3000</p>
+                             <div class="position">
+                                 <div class="contry">son la</div>
+                                 <div class="date">19/05/2021</div>
+                             </div>
+                           </div>
+                       </div>
+                       <div class="product-item">
+                           <div class="thumb">
+                               <div class="neo">hot</div>
+                              <img src="https://asset.chopet.vn/temps/06-02-2021/685ad711b42681b3ae62110536249e318e387ac3.jpg?w=300&t=jpg" alt="">
+                           </div>
+                           <div class="product-details">
+                            <h3 class="name">[Sơn La] Phối mèo anh lông ngắn màu xám xanh.</h3>
+                             <p class="price">3000</p>
+                             <div class="position">
+                                 <div class="contry">son la</div>
+                                 <div class="date">19/05/2021</div>
+                             </div>
+                           </div>
+                       </div>
+                       <div class="product-item">
+                           <div class="thumb">
+                               <div class="neo">hot</div>
+                              <img src="https://asset.chopet.vn/temps/06-02-2021/685ad711b42681b3ae62110536249e318e387ac3.jpg?w=300&t=jpg" alt="">
+                           </div>
+                           <div class="product-details">
+                            <h3 class="name">[Sơn La] Phối mèo anh lông ngắn màu xám xanh.</h3>
+                             <p class="price">3000</p>
+                             <div class="position">
+                                 <div class="contry">son la</div>
+                                 <div class="date">19/05/2021</div>
+                             </div>
+                           </div>
+                       </div>
+                       <div class="product-item">
+                           <div class="thumb">
+                               <div class="neo">hot</div>
+                              <img src="https://asset.chopet.vn/temps/06-02-2021/685ad711b42681b3ae62110536249e318e387ac3.jpg?w=300&t=jpg" alt="">
+                           </div>
+                           <div class="product-details">
+                            <h3 class="name">[Sơn La] Phối mèo anh lông ngắn màu xám xanh.</h3>
+                             <p class="price">3000</p>
+                             <div class="position">
+                                 <div class="contry">son la</div>
+                                 <div class="date">19/05/2021</div>
+                             </div>
+                           </div>
+                       </div>
+                       <div class="product-item">
+                           <div class="thumb">
+                               <div class="neo">hot</div>
+                              <img src="https://asset.chopet.vn/temps/06-02-2021/685ad711b42681b3ae62110536249e318e387ac3.jpg?w=300&t=jpg" alt="">
+                           </div>
+                           <div class="product-details">
+                            <h3 class="name">[Sơn La] Phối mèo anh lông ngắn màu xám xanh.</h3>
+                             <p class="price">3000</p>
+                             <div class="position">
+                                 <div class="contry">son la</div>
+                                 <div class="date">19/05/2021</div>
+                             </div>
+                           </div>
+                       </div>
+                       <div class="product-item">
+                           <div class="thumb">
+                               <div class="neo">hot</div>
+                              <img src="https://asset.chopet.vn/temps/06-02-2021/685ad711b42681b3ae62110536249e318e387ac3.jpg?w=300&t=jpg" alt="">
+                           </div>
+                           <div class="product-details">
+                            <h3 class="name">[Sơn La] Phối mèo anh lông ngắn màu xám xanh.</h3>
+                             <p class="price">3000</p>
+                             <div class="position">
+                                 <div class="contry">son la</div>
+                                 <div class="date">19/05/2021</div>
+                             </div>
+                           </div>
+                       </div>
+                       <div class="product-item">
+                           <div class="thumb">
+                               <div class="neo">hot</div>
+                              <img src="https://asset.chopet.vn/temps/06-02-2021/685ad711b42681b3ae62110536249e318e387ac3.jpg?w=300&t=jpg" alt="">
+                           </div>
+                           <div class="product-details">
+                            <h3 class="name">[Sơn La] Phối mèo anh lông ngắn màu xám xanh.</h3>
+                             <p class="price">3000</p>
+                             <div class="position">
+                                 <div class="contry">son la</div>
+                                 <div class="date">19/05/2021</div>
+                             </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="row">
+                       <button class="viewmore">xem them</button>
+                   </div>
+               </div>
+           </section>
+      </section>
+         <footer>
+             <p>CÔNG TY TNHH DỊCH VỤ THÚ CƯNG CHOPET VIỆT NAM - Địa chỉ: C31 Đường 15, Phường Tân Thuận Tây, Quận 7, Thành phố Hồ Chí Minh, Việt Nam </p>
+            <p>Giấy ĐKKD số: 0315707307 do Sở Kế hoạch và Đầu tư TP.HCM cấp lần đầu ngày 29/05/2019</p>
+         
+            </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+     <script type="module" src="main.js"></script>  
+</body>
+</html>

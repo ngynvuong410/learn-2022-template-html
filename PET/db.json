@@ -1,0 +1,333 @@
+{
+  "catergory": [
+    {
+      "id": 1,
+      "name": "mua bán thú cưng",
+      "img": "https://asset.chopet.vn/backgrounds/category_home_1.jpg?t=webp&w=220",
+      "link": "mua-thu-cung"
+    },
+    {
+      "id": 2,
+      "name": "Phối giống",
+      "img": "https://asset.chopet.vn/backgrounds/category_home_3.jpg?t=webp&w=220",
+      "link": "phoi-gionh"
+    },
+    {
+      "id": 3,
+      "name": "Thú y gần bạn",
+      "img": "https://asset.chopet.vn/backgrounds/category_home_5.jpg?t=webp&w=220",
+      "link": ""
+    },
+    {
+      "id": 4,
+      "name": "Cộng đồng yêu thú cưng",
+      "img": "https://asset.chopet.vn/backgrounds/category_home_7.jpg?t=webp&w=220",
+      "link": "thu-y-gan-ban"
+    },
+    {
+      "id": 5,
+      "name": "mua bán thú cưng",
+      "img": "https://asset.chopet.vn/backgrounds/category_home_9.jpg?t=webp&w=220",
+      "link": "mua-ban-thu-cung"
+    },
+    {
+      "id": 6,
+      "name": "sự kiện và khuyến mãi",
+      "img": "https://asset.chopet.vn/backgrounds/category_home_2.jpg?t=webp&w=220",
+      "link": "su-kien-khuyen-mai"
+    },
+    {
+      "id": 7,
+      "name": "bảng  giá chó mèo",
+      "img": "https://asset.chopet.vn/backgrounds/category_home_4.jpg?t=webp&w=220",
+      "link": "bang-gia-cho-meo"
+    }
+  ],
+  "menu": [
+    {
+      "id": 1,
+      "name": "dogs",
+      "menu_sub": [
+        {
+          "name": "dogs 01"
+        },
+        {
+          "name": "dogs 02"
+        },
+        {
+          "name": "dogs 03"
+        },
+        {
+          "name": "dogs 04"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "cats",
+      "menu_sub": [
+        {
+          "name": "cát 01"
+        },
+        {
+          "name": "cát 02"
+        },
+        {
+          "name": "cát 03"
+        },
+        {
+          "name": "cát 04"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Bird",
+      "menu_sub": [
+        {
+          "name": "bird 01"
+        },
+        {
+          "name": "bird 02"
+        },
+        {
+          "name": "bird 03"
+        },
+        {
+          "name": "bird 04"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Fist",
+      "menu_sub": [
+        {
+          "name": "fish 01"
+        },
+        {
+          "name": "fish 02"
+        },
+        {
+          "name": "fish 03"
+        },
+        {
+          "name": "fish 04"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Other pet",
+      "menu_sub": [
+        {
+          "name": "other 01"
+        },
+        {
+          "name": "other 02"
+        },
+        {
+          "name": "other 03"
+        },
+        {
+          "name": "other 04"
+        }
+      ]
+    }
+  ],
+  "pets": [
+    {
+      "id": 0,
+      "catergoryID": 0,
+      "pet_type": 2,
+      "id_country": 1,
+      "hot_id": 0,
+      "name": "[CATS]samoyed vua trang lai vua trong",
+      "id_menu": 1,
+      "price": 3600,
+      "contry": "Hồ chí Minh",
+      "date": "12/02/2016",
+      "img": "data:image/jpeg;base64,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"
+    },
+    {
+      "id": 1,
+      "catergoryID": 1,
+      "pet_type": 3,
+      "id_country": 2,
+      "hot_id": 0,
+      "name": "[Bird]samoyed vua trang lai vua trong",
+      "id_menu": 2,
+      "price": 1600,
+      "contry": "Cần Thơ",
+      "date": "12/02/2016",
+      "img": "data:image/jpeg;base64,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"
+    },
+    {
+      "id": 2,
+      "catergoryID": 3,
+      "pet_type": 4,
+      "id_country": 1,
+      "hot_id": 1,
+      "name": "[Fist]samoyed vua trang lai vua trong",
+      "id_menu": 3,
+      "price": 300,
+      "contry": "Hồ chí Minh",
+      "date": "12/02/2016",
+      "img": "https://asset.chopet.vn/temps/17-03-2021/e6e4ab518d2f15c9f246a24d80a991bc3ecbabd3.jpg?t=webp&w=250"
+    },
+    {
+      "id": 3,
+      "catergoryID": 4,
+      "pet_type": 5,
+      "id_country": 3,
+      "hot_id": 0,
+      "name": "[Other pet]samoyed vua trang lai vua trong",
+      "id_menu": 4,
+      "price": 3500,
+      "contry": "Hà Nội",
+      "date": "12/02/2016",
+      "img": "https://asset.chopet.vn/temps/31-03-2021/81a03da06b0318c8dd293b19a576ac1220541568.jpg?t=webp&w=250"
+    },
+    {
+      "id": 4,
+      "catergoryID": 3,
+      "pet_type": 3,
+      "id_country": 1,
+      "hot_id": 1,
+      "name": "[Bird]samoyed vua trang lai vua trong",
+      "id_menu": 5,
+      "price": 3800,
+      "contry": "Hồ chí Minh",
+      "date": "12/02/2016",
+      "img": "https://asset.chopet.vn/pet_posts/09-10-2020/b5f91bebef3731e6a1a0c203f29ca052123096f5.jpg?t=webp&w=250"
+    },
+    {
+      "id": 5,
+      "catergoryID": 2,
+      "pet_type": 3,
+      "id_country": 1,
+      "hot_id": 0,
+      "name": "[Bird]samoyed vua trang lai vua trong",
+      "id_menu": 6,
+      "price": 5600,
+      "contry": "Hồ chí Minh",
+      "date": "12/02/2016",
+      "img": "https://asset.chopet.vn/pet_posts/05-01-2021/0c4771a616d0bb5cdb73c77d36ba943752358d21.jpg?t=webp&w=250"
+    },
+    {
+      "id": 0,
+      "catergoryID": 5,
+      "pet_type": 4,
+      "id_country": 1,
+      "hot_id": 0,
+      "name": "[Fist]samoyed vua trang lai vua trong",
+      "id_menu": 1,
+      "price": 9600,
+      "contry": "Hồ chí Minh",
+      "date": "12/02/2016",
+      "img": "https://asset.chopet.vn/temps/06-02-2021/685ad711b42681b3ae62110536249e318e387ac3.jpg?w=300&t=jpg"
+    },
+    {
+      "id": 1,
+      "catergoryID": 5,
+      "pet_type": 5,
+      "id_country": 3,
+      "hot_id": 0,
+      "name": "[Other pet]samoyed vua trang lai vua trong",
+      "id_menu": 2,
+      "price": 45600,
+      "contry": "Hà Nội",
+      "date": "12/02/2016",
+      "img": "https://asset.chopet.vn/temps/31-03-2021/c0e42617ba945585edfbd6df44b8abcd1152a6de.jpg?t=webp&w=250"
+    },
+    {
+      "id": 2,
+      "catergoryID": 6,
+      "pet_type": 1,
+      "id_country": 2,
+      "hot_id": 1,
+      "name": "[dogs]samoyed vua trang lai vua trong",
+      "id_menu": 3,
+      "price": 300,
+      "contry": "Cần Thơ",
+      "date": "12/02/2016",
+      "img": "https://asset.chopet.vn/temps/17-03-2021/e6e4ab518d2f15c9f246a24d80a991bc3ecbabd3.jpg?t=webp&w=250"
+    },
+    {
+      "id": 3,
+      "catergoryID": 2,
+      "pet_type": 1,
+      "id_country": 2,
+      "hot_id": 0,
+      "name": "[dogs]samoyed vua trang lai vua trong",
+      "id_menu": 4,
+      "price": 3200,
+      "contry": "Cần Thơ",
+      "date": "12/02/2016",
+      "img": "https://asset.chopet.vn/temps/31-03-2021/81a03da06b0318c8dd293b19a576ac1220541568.jpg?t=webp&w=250"
+    },
+    {
+      "id": 4,
+      "catergoryID": 3,
+      "pet_type": 2,
+      "id_country": 1,
+      "hot_id": 1,
+      "name": "[cats]samoyed vua trang lai vua trong",
+      "id_menu": 5,
+      "price": 3100,
+      "contry": "Hồ chí Minh",
+      "date": "12/02/2016",
+      "img": "https://asset.chopet.vn/pet_posts/09-10-2020/b5f91bebef3731e6a1a0c203f29ca052123096f5.jpg?t=webp&w=250"
+    },
+    {
+      "id": 5,
+      "catergoryID": 4,
+      "pet_type": 2,
+      "id_country": 1,
+      "hot_id": 0,
+      "name": "[cats]samoyed vua trang lai vua trong",
+      "id_menu": 6,
+      "price": 9600,
+      "contry": "Hồ chí Minh",
+      "date": "12/02/2016",
+      "img": "https://asset.chopet.vn/pet_posts/05-01-2021/0c4771a616d0bb5cdb73c77d36ba943752358d21.jpg?t=webp&w=250"
+    }
+  ],
+  "hot": [
+    {
+      "id": 0,
+      "type": "hot"
+    },
+    {
+      "id": 1,
+      "type": "sale"
+    }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "username": "vuongm@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": 2,
+      "username": "vuongm2410@gmail.com",
+      "password": "592"
+    },
+    {
+      "username": "abc@gmail.com",
+      "password": "123",
+      "id": 3
+    },
+    {
+      "username": "abc@gmail.co",
+      "password": "2",
+      "id": 4
+    },
+    {
+      "username": "vuon240@gmail.com",
+      "password": "1223",
+      "id": 5
+    }
+  ]
+}
