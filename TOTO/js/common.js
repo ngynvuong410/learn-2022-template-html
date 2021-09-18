@@ -5,7 +5,10 @@ export const url = {
     "poster":"http://localhost:3000/poster",
     "products":"http://localhost:3000/products",
     "nesw":"http://localhost:3000/news",
-     "Carts":"http://localhost:3000/carts/"
+     "Carts":"http://localhost:3000/carts/",
+     "users":"http://localhost:3000/users/",
+     "evaluates":"http://localhost:3000/evaluates/",
+      "country":"http://localhost:3000/vietnam/"
 
 }
 export const  getData = function(url){

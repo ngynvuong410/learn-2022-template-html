@@ -1,4 +1,5 @@
 import { postData, url, getData } from '../js/common.js'
+var listIDDetele = []
   // LOAD INFO 
   ; (function () {
 
@@ -95,6 +96,25 @@ eAddCart.onclick = function (e) {
     addCart(productCkeck, val)
   }
 }
+
+function showUp() {
+  //show popup
+  document.querySelector('.main-wapper').classList.add('overlay')
+  document.querySelector('.popup-carts').style.display = 'block'
+  const eExits = document.querySelector('.exits')
+  eExits.onclick = function () {
+    document.querySelector('.main-wapper.overlay').classList.remove('overlay')
+    document.querySelector('.popup-carts').style.display = 'none'
+    //REMOVE ITEM DATA
+    const isQuestion = confirm('are you sure tkis change ?')
+    if (isQuestion) {
+      listIDDetele.map(item => {
+        deleteCartItem(item)
+      })
+    }
+
+  }
+}
 function addCart(val, orginvalue) {
 
   // add cart for data
@@ -103,14 +123,7 @@ function addCart(val, orginvalue) {
       if (data.length > 0) {
         const element = document.querySelector('.cart-product-warpper')
         renderCartHtmls(data, element)
-        //show popup
-        document.querySelector('.main-wapper').classList.add('overlay')
-        document.querySelector('.popup-carts').style.display = 'block'
-        const eExits = document.querySelector('.exits')
-        eExits.onclick = function () {
-          document.querySelector('.main-wapper.overlay').classList.remove('overlay')
-          document.querySelector('.popup-carts').style.display = 'none'
-        }
+        showUp()
       }
       let ischeck = false
       for (let i = 0; i < data.length; i++) {
@@ -131,6 +144,7 @@ function addCart(val, orginvalue) {
           .then((data) => {
 
             confirm('add cart suseccfully! ')
+
           });
       } else {
         confirm("do you want edit ?")
@@ -142,7 +156,16 @@ function addCart(val, orginvalue) {
       eRemove.forEach(element => {
         element.onclick = function (e) {
           const id = this.getAttribute('data-id')
-          deleteCartItem(id)
+          const eParentNone = this.parentNode
+          const eResult = document.querySelector('.total')
+          const valTotal = Number.parseInt(Number(eResult.textContent.replace(/[^0-9.-]+/g, "")))
+          const valmoney = Number.parseInt(Number(eParentNone.querySelector('.total-money').textContent.replace(/[^0-9.-]+/g, "")))
+          eResult.innerHTML = new Intl.NumberFormat('ja-JP', { style: 'currency', currency: 'JPY' }).format(valTotal - valmoney)
+
+
+          listIDDetele.push(id)
+          eParentNone.remove()
+
         }
       })
       return data
@@ -150,47 +173,48 @@ function addCart(val, orginvalue) {
     .then(data => {
       //onckane input quantity
       const eQuantity = document.querySelectorAll('.quatity input')
-    
-         eQuantity.forEach(element=>{
-        
-           element.onchange = function () {
-            const NodeParent = this.parentNode.parentNode
-              const price = Number.parseInt(NodeParent.querySelector('.cart-price').getAttribute('data-price'))
-              let resultPrice = price * Number.parseInt(this.value)
-              NodeParent.querySelector('.total-money').innerHTML=new Intl.NumberFormat('ja-JP', { style: 'currency', currency: 'JPY' }).format(resultPrice)
-               const id= NodeParent.classList[1].replace('cart-item_','')
-              const [objResult] = data.filter(item=>item.id==id)
-           
-              objResult.quantity = this.value
-              objResult.total = resultPrice 
-              editCartItem(id,objResult)
-         
-           }
-         })
+
+      eQuantity.forEach(element => {
+
+        element.onchange = function () {
+          const NodeParent = this.parentNode.parentNode
+          const price = Number.parseInt(NodeParent.querySelector('.cart-price').getAttribute('data-price'))
+          let resultPrice = price * Number.parseInt(this.value)
+          NodeParent.querySelector('.total-money').innerHTML = new Intl.NumberFormat('ja-JP', { style: 'currency', currency: 'JPY' }).format(resultPrice)
+          let listTotalMoney = document.querySelectorAll('.total-money')
+          let pays = 0
+          listTotalMoney.forEach(e => {
+            pays += Number.parseInt(Number(e.textContent.replace(/[^0-9.-]+/g, "")))
+          })
+          document.querySelector('.total').innerHTML = new Intl.NumberFormat('ja-JP', { style: 'currency', currency: 'JPY' }).format(pays)
+          const id = NodeParent.classList[1].replace('cart-item_', '')
+          const [objResult] = data.filter(item => item.id == id)
+          objResult.quantity = this.value
+          objResult.total = resultPrice
+          editCartItem(id, objResult)
+
+        }
+      })
     })
 
 }
 
-function editCartItem (id, data) {
- postData(url.Carts+id,data,"PUT")
- .then(data=>{
-   console.log(data);
+function editCartItem(id, data) {
+  postData(url.Carts + id, data, "PUT")
+    .then(data => {
+      console.log(data);
 
- })
+    })
 }
 function deleteCartItem(id) {
-  fetch(url.Carts + id, {
-    method: 'DELETE',
-  })
-    .then(res => res.text()) // or res.json()
-    .then(res => confirm('Deleted item cart'))
+  return fetch(url.Carts + id, { method: 'DELETE' }).then(res => res.text())
 }
 function renderCartHtmls(data, element) {
 
   const manyToPain = document.querySelector('.total')
   let many = 0;
   const htmls = data.map(item => {
-     many += item.total
+    many += item.total
     return `<div class="cart-item cart-item_${item.id} ">
     <img src="${item.img}" alt="">
     <div class="cart-name">${item.name}</div>
@@ -199,9 +223,108 @@ function renderCartHtmls(data, element) {
      <div class="total-money">${new Intl.NumberFormat('ja-JP', { style: 'currency', currency: 'JPY' }).format(item.total)}</div>
      <button data-id=${item.id} class="remove">X</button>
 </div>`
-   
+
   })
-   manyToPain.innerHTML = new Intl.NumberFormat('ja-JP', { style: 'currency', currency: 'JPY' }).format(many)
+  manyToPain.innerHTML = new Intl.NumberFormat('ja-JP', { style: 'currency', currency: 'JPY' }).format(many)
   element.innerHTML = htmls.join('')
 }
+; (function () {
+  const listhead = document.querySelectorAll('.tabs-wapper div')
+  const listItems = document.querySelectorAll('.tabs-item')
+  listhead.forEach((element, idx) => {
+    element.onclick = function () {
 
+      document.querySelector('.tabs-item.active').classList.remove('active')
+      listItems[idx].classList.add('active')
+    }
+  })
+})()
+
+  ; (function () {
+    if (sessionStorage.getItem('valJson') !== null) {
+      let [val] = JSON.parse(sessionStorage.getItem('valJson'))
+      getData(url.products)
+        .then(function (data) {
+          const reuslt = data.filter(item => item.cartergoryID == val.cartergoryID)
+          const htmls = reuslt.map((item) => {
+
+            let html = ` <div class="product-item product-item_${item.id}">
+                 <div class="thumb">`;
+
+            item.img.forEach((element, idx) => {
+              let isActive = false;
+              if (idx == 0) {
+                isActive = true
+              }
+              html += `<img src="${element}" class="product-change ${isActive ? 'active' : ''}" alt="">`
+            });
+
+            html +=
+              `<div class="content">
+                        <div class="many-type">`;
+            item.imgmalls.forEach(element => {
+
+              html += `<img src="${element.img}" alt="">`
+            });
+            html += `
+                        </div>
+                    </div>
+                </div>
+
+                <div class="price">${new Intl.NumberFormat('ja-JP', { style: 'currency', currency: 'JPY' }).format(item.pirce)}</div>
+            </div>`;
+            return html
+          })
+          const eWapper = document.querySelector('.same-category .colection-products ')
+          eWapper.innerHTML = htmls.join('')
+        })
+    }
+
+  })()
+//sign in
+const sign = document.querySelector('.sign')
+const btnSign = document.querySelector('.sign-in')
+sign.onclick = function () {
+  document.querySelector('.body-loin').style.display = "none"
+  document.querySelector('.body-sign.body-loin').style.display = "block"
+
+}
+btnSign.onclick = function () {
+  const username = document.querySelector('.body-sign [type="text"]').value
+  const pass = document.querySelector('.body-sign [type="password"]').value
+  if (username == '' || pass == '') {
+    confirm('Please check user or password!')
+  } else {
+    postData(url.users, { username, pass }, "POST")
+      .then(() => confirm('Sign in sucseccfully!'))
+
+  }
+}
+//FORGET PASSWORD
+const fgPass = document.querySelector('.fg-pass')
+fgPass.onclick = function (e) {
+  document.querySelector('.body-loin').style.display = "none"
+  document.querySelector('.forget-password').style.display = "block"
+}
+const btnGetPass = document.querySelector('.get-password')
+btnGetPass.onclick = function (e) {
+  const user = document.querySelector('.forget-password [type="text"]').value
+  if (user == '') {
+    confirm('Please check user !')
+  } else {
+    getData(url.users)
+      .then(data => {
+        const hasUser = data.filter(item => item.username == user)
+        if (hasUser.length > 0) {
+          const newPass = Math.floor(Math.random() * 10000);
+          this.innerHTML = ' New Password :' + newPass
+          hasUser[0].pass = newPass
+          postData(url.users + hasUser[0].id, hasUser[0], 'PUT')
+            .then(data => confirm('Change password succsecfully!'))
+        } else {
+          confirm('Please check username is invalid/!')
+        }
+      })
+
+  }
+}

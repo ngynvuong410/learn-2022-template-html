@@ -137,7 +137,8 @@
         "s",
         "m",
         "xl"
-      ]
+      ],
+      "cartergoryID": 1
     },
     {
       "id": 2,
@@ -166,7 +167,8 @@
         "s",
         "m",
         "xl"
-      ]
+      ],
+      "cartergoryID": 2
     },
     {
       "id": 3,
@@ -195,7 +197,8 @@
         "s",
         "m",
         "xl"
-      ]
+      ],
+      "cartergoryID": 3
     },
     {
       "id": 4,
@@ -224,7 +227,8 @@
         "s",
         "m",
         "xl"
-      ]
+      ],
+      "cartergoryID": 2
     },
     {
       "id": 5,
@@ -253,7 +257,8 @@
         "s",
         "m",
         "xl"
-      ]
+      ],
+      "cartergoryID": 4
     },
     {
       "id": 6,
@@ -281,7 +286,8 @@
         "s",
         "m",
         "xl"
-      ]
+      ],
+      "cartergoryID": 2
     },
     {
       "id": 7,
@@ -309,7 +315,8 @@
         "s",
         "m",
         "xl"
-      ]
+      ],
+      "cartergoryID": 4
     },
     {
       "id": 8,
@@ -337,7 +344,8 @@
         "s",
         "m",
         "xl"
-      ]
+      ],
+      "cartergoryID": 2
     },
     {
       "id": 9,
@@ -365,7 +373,8 @@
         "s",
         "m",
         "xl"
-      ]
+      ],
+      "cartergoryID": 3
     }
   ],
   "news": [
@@ -442,8 +451,8 @@
   ],
   "carts": [
     {
-      "id_product": 7,
-      "name": "product 7",
+      "id_product": 8,
+      "name": "product 8",
       "img": "https://storage.googleapis.com/cdn.nhanh.vn/store/7136/ps/20210512/12052021110533_IMG_8317.jpg",
       "size": "m",
       "quantity": "1",
@@ -452,8 +461,8 @@
       "id": 1
     },
     {
-      "id_product": 9,
-      "name": "product 9",
+      "id_product": 2,
+      "name": "product 2",
       "img": "https://storage.googleapis.com/cdn.nhanh.vn/store/7136/ps/20210329/2912202131210_IMG_4416_thumb.jpg",
       "size": "xl",
       "quantity": "1",
@@ -461,5 +470,72 @@
       "total": 185000,
       "id": 2
     }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "idProudct": 1,
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris dictum odio ut urna consequat, at gravida metus tristique. Morbi quis ante ut orci euismod lobortis in ac neque. Quisque tincidunt quam vitae risus vulputate, vel tincidunt eros cursus. Donec quis dignissim libero. Morbi eget pellentesque purus. Pellentesque nec diam dictum, elementum felis vel, pharetra lorem. Vestibulum commodo lectus a dui hendrerit, sed accumsan risus congue. Praesent a consequat erat, eu ultrices nibh."
+    }
+  ],
+  "discriptions": [
+    {
+      "id": 1,
+      "idProduct": 1,
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris dictum odio ut urna consequat, at gravida metus tristique. Morbi quis ante ut orci euismod lobortis in ac neque. Quisque tincidunt quam vitae risus vulputate, vel tincidunt eros cursus. Donec quis dignissim libero. Morbi eget pellentesque purus. Pellentesque nec diam dictum, elementum felis vel, pharetra lorem. Vestibulum commodo lectus a dui hendrerit, sed accumsan risus congue. Praesent a consequat erat, eu ultrices nibh."
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "abc",
+      "pass": 6007
+    },
+    {
+      "username": "abcd",
+      "pass": "123456",
+      "id": 2
+    },
+    {
+      "username": "sdsafsa",
+      "pass": "12345",
+      "id": 3
+    }
+  ],
+  "evaluates": [
+    {
+      "id": 1,
+      "id_user": 1,
+      "reviews": [
+        "Diễm ngáo đá!",
+        "Anh vương đẹp trai!",
+        "ok shop ơi!!  yêu shop nhất  luôn"
+      ],
+      "date": [
+        "13:17'-18/9/2021",
+        "13:21'-18/9/2021",
+        "13:22'-18/9/2021"
+      ],
+      "rated": 5
+    }
+  ],
+  "vietnam":[
+     {"Hồ chí Minh":[
+       {"zipcode":"hcm01","name":"quan 1"},
+       {"zipcode":"hcm02","name":"quan 2"},
+       {"zipcode":"hcm03","name":"quan 3"},
+       {"zipcode":"hcm04","name":"quan 4"},
+       {"zipcode":"hcm05","name":"quan 5"},
+       {"zipcode":"hcm06","name":"quan THU DUC"},
+       {"zipcode":"hcm07","name":"quan 9"},
+       {"zipcode":"hcm08","name":"BINH THANH"},
+       {"zipcode":"hcm09","name":"GO VAP"}
+     ]},
+     {"cần Thơ":[
+      {"zipcode":"ct01","name":"quan Ninh kieu"},
+      {"zipcode":"ct02","name":"quan vinh thanh"},
+      {"zipcode":"ct03","name":"quan cai rang"}
+    
+    ]}
   ]
 }
