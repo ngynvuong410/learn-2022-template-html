@@ -459,16 +459,6 @@
       "price": 185000,
       "total": 185000,
       "id": 1
-    },
-    {
-      "id_product": 2,
-      "name": "product 2",
-      "img": "https://storage.googleapis.com/cdn.nhanh.vn/store/7136/ps/20210329/2912202131210_IMG_4416_thumb.jpg",
-      "size": "xl",
-      "quantity": "1",
-      "price": 185000,
-      "total": 185000,
-      "id": 2
     }
   ],
   "comments": [
@@ -509,33 +499,74 @@
       "reviews": [
         "Diễm ngáo đá!",
         "Anh vương đẹp trai!",
-        "ok shop ơi!!  yêu shop nhất  luôn"
+        "ok shop ơi!!  yêu shop nhất  luôn",
+        "hi"
       ],
       "date": [
         "13:17'-18/9/2021",
         "13:21'-18/9/2021",
-        "13:22'-18/9/2021"
+        "13:22'-18/9/2021",
+        "20:0'-20/9/2021"
       ],
       "rated": 5
     }
   ],
-  "vietnam":[
-     {"Hồ chí Minh":[
-       {"zipcode":"hcm01","name":"quan 1"},
-       {"zipcode":"hcm02","name":"quan 2"},
-       {"zipcode":"hcm03","name":"quan 3"},
-       {"zipcode":"hcm04","name":"quan 4"},
-       {"zipcode":"hcm05","name":"quan 5"},
-       {"zipcode":"hcm06","name":"quan THU DUC"},
-       {"zipcode":"hcm07","name":"quan 9"},
-       {"zipcode":"hcm08","name":"BINH THANH"},
-       {"zipcode":"hcm09","name":"GO VAP"}
-     ]},
-     {"cần Thơ":[
-      {"zipcode":"ct01","name":"quan Ninh kieu"},
-      {"zipcode":"ct02","name":"quan vinh thanh"},
-      {"zipcode":"ct03","name":"quan cai rang"}
-    
-    ]}
+  "vietnam": [
+    {
+      "Hồ chí Minh": [
+        {
+          "zipcode": "hcm01",
+          "name": "quan 1"
+        },
+        {
+          "zipcode": "hcm02",
+          "name": "quan 2"
+        },
+        {
+          "zipcode": "hcm03",
+          "name": "quan 3"
+        },
+        {
+          "zipcode": "hcm04",
+          "name": "quan 4"
+        },
+        {
+          "zipcode": "hcm05",
+          "name": "quan 5"
+        },
+        {
+          "zipcode": "hcm06",
+          "name": "quan THU DUC"
+        },
+        {
+          "zipcode": "hcm07",
+          "name": "quan 9"
+        },
+        {
+          "zipcode": "hcm08",
+          "name": "BINH THANH"
+        },
+        {
+          "zipcode": "hcm09",
+          "name": "GO VAP"
+        }
+      ]
+    },
+    {
+      "cần Thơ": [
+        {
+          "zipcode": "ct01",
+          "name": "quan Ninh kieu"
+        },
+        {
+          "zipcode": "ct02",
+          "name": "quan vinh thanh"
+        },
+        {
+          "zipcode": "ct03",
+          "name": "quan cai rang"
+        }
+      ]
+    }
   ]
 }

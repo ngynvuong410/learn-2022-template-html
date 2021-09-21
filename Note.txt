@@ -1,0 +1,10 @@
+//THIS
+object.method() thì this là của thằng đối tượng chấm đến method
+Mỗi func có một context khác nhau nên this khác nhau.
+func không có object chấm đến nó thì this ==windon
+Arrow func không có context nên nó sẽ lấy thằng this  của func gần nó nhất
+
+/.BIND()
+Ràng buộc theo đối tượng chỉ định
+sau khi bind() một method thì vẫn truyền đối số vào bình thường
+sau khi bind thì biến gán và method binh() ko === nhau , bind trả về một func mới

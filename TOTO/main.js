@@ -125,7 +125,7 @@ import { getData, url, slideRunAuto } from "./js/common.js"
       })
       .then(function (data) {
         $('.product-item .thumb').slick({
-       
+
           arrows: false,
           autoplay: true,
           autoplaySpeed: 5000
@@ -140,21 +140,7 @@ import { getData, url, slideRunAuto } from "./js/common.js"
         });
         return data //promise return for then below use again
       })
-      .then((data) => {
-        //redirect page 
-        const products = document.querySelectorAll('.colection-products .product-item')
-        products.forEach(element => {
-            element.onclick  =function () {
-              const id = element.classList[1].replace('product-item_','');
-                const valJson = JSON.stringify( data.filter(item => item.id==id))
-                sessionStorage.setItem("valJson", valJson);
-               window.location.href = window.location.origin + '/productDetail.html'
-            
-                
-            }
-        })
 
-      })
   })()
 
   // Load news 
