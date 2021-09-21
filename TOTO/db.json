@@ -451,13 +451,13 @@
   ],
   "carts": [
     {
-      "id_product": 8,
-      "name": "product 8",
-      "img": "https://storage.googleapis.com/cdn.nhanh.vn/store/7136/ps/20210512/12052021110533_IMG_8317.jpg",
-      "size": "m",
-      "quantity": "1",
+      "id_product": 2,
+      "name": "product 2",
+      "img": "https://storage.googleapis.com/cdn.nhanh.vn/store/7136/ps/20210512/12052021110536_IMG_8311.jpg",
+      "size": "xl",
+      "quantity": "2",
       "price": 185000,
-      "total": 185000,
+      "total": 370000,
       "id": 1
     }
   ],
@@ -500,13 +500,15 @@
         "Diễm ngáo đá!",
         "Anh vương đẹp trai!",
         "ok shop ơi!!  yêu shop nhất  luôn",
-        "hi"
+        "hi",
+        "ok"
       ],
       "date": [
         "13:17'-18/9/2021",
         "13:21'-18/9/2021",
         "13:22'-18/9/2021",
-        "20:0'-20/9/2021"
+        "20:0'-20/9/2021",
+        "15:40'-21/9/2021"
       ],
       "rated": 5
     }

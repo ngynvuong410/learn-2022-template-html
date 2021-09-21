@@ -188,3 +188,11 @@ import { getData, url, slideRunAuto } from "./js/common.js"
       })
   })()
 
+//onclick menu category
+const menu = document.querySelector('.nav-box')
+menu.onclick = function (e) { 
+   const eItem=e.target.closest('.nav-item ')
+   const id = eItem.classList[1].replace('nav-item_','')
+   sessionStorage.setItem("CATEGORY_ID", JSON.stringify({"id":id,"name":eItem.textContent}));
+  window.location.href = window.location.origin + '/caegory.html'
+}

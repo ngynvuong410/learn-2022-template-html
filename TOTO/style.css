@@ -370,3 +370,52 @@ span{color: #000; padding-right:  10px; color: gray;text-transform: capitalize;}
 option{
   color: gray;
 }
+.view-bar svg {
+  max-width: 15px;
+  width: 15px;
+  cursor: pointer;
+}
+
+.filter-bar {
+  display: flex;
+  padding: 10px 0;
+  justify-content: flex-end;
+}
+
+select.sort-bar {
+  margin: 0 20px;
+  padding: 0 10px;
+  border: 1px solid #8080804a;
+  border-radius: 4px;
+  text-transform: capitalize;
+  padding: 10px 20px;
+}
+
+.view-bar {
+  display: flex;
+  align-items: center;
+}
+
+.section-products.category {
+  padding: 0 20px;
+}
+.category .colection-products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.category .colection-products .product-item {
+  width: 23%;
+}
+.category .section-heading h3{
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 1rem;
+  font-style: italic;
+
+}
+.colection-products.two-line .product-item {
+  width: 50%;
+  max-width: 45%;
+}
