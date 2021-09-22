@@ -1,7 +1,8 @@
-import { getData, url } from "./common.js";
+import { getData, url ,loadSikder} from "./common.js";
 const $ = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document)
 const {id,name} =JSON.parse(sessionStorage.getItem('CATEGORY_ID'))
+loadSikder()
 ;(function () {
     const cotainer = $('.colection-products ')
     const heading = $('.section-heading h3')
@@ -100,3 +101,4 @@ function filterOptions(val) {
       );
     };
   }
+  

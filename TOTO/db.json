@@ -451,13 +451,13 @@
   ],
   "carts": [
     {
-      "id_product": 2,
-      "name": "product 2",
-      "img": "https://storage.googleapis.com/cdn.nhanh.vn/store/7136/ps/20210512/12052021110536_IMG_8311.jpg",
+      "id_product": 3,
+      "name": "product 3",
+      "img": "https://storage.googleapis.com/cdn.nhanh.vn/store/7136/ps/20210329/2912202131210_IMG_4416_thumb.jpg",
       "size": "xl",
-      "quantity": "2",
-      "price": 185000,
-      "total": 370000,
+      "quantity": "1",
+      "price": 200000,
+      "total": 200000,
       "id": 1
     }
   ],

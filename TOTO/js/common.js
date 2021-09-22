@@ -55,6 +55,51 @@ export async function postData(url, data, method) {
   });
   return response.json(); // parses JSON response into native JavaScript objects
 }
+  //load slider
+ export function loadSikder () {
+  getData(url.slider)
+    .then(data => {
+      const eSlider = document.querySelector('.carouzel')
+      const htmls = data.map((item, idx) => {
+        let active = ''
+        if (idx == 0) {
+          active = 'active'
+        }
+        return `<div class="carouzel-item ${active}">
+                <img src="${item.img}" alt="">
+            </div>`
+      })
+      eSlider.innerHTML = htmls.join('')
+    })
+}
+  //Load avata 
+;(function () {
+  getData(url.shop)
+    .then(data => {
+
+      const eAvata = document.querySelector('.logo img')
+      const phoneNumber = document.querySelector('.phone-number')
+      eAvata.src = data[0].avata
+      phoneNumber.textContent = data[0].phone
+    })
+}());
+ // Function iife auto call
+ ; (function () {
+  // all your code here
+  slideRunAuto('.carouzel-item', 4000)
+})();
+//  Load menu 
+(function () {
+  getData(url.menu)
+    .then(data => {
+      const eMenu = document.querySelector('.nav-box')
+      const htmls = data.map(item => {
+        return `<div class="nav-item nav-item_${item.id}">${item.name}</div>`
+      })
+      eMenu.innerHTML = htmls.join('')
+    })
+})()
+
 //product onclick - fix when data genarter after
 //redirect page 
 
@@ -73,3 +118,11 @@ products.onclick = function (e) {
   }
 }
 
+//onclick menu category
+const menu = document.querySelector('.nav-box')
+menu.onclick = function (e) { 
+   const eItem=e.target.closest('.nav-item ')
+   const id = eItem.classList[1].replace('nav-item_','')
+   sessionStorage.setItem("CATEGORY_ID", JSON.stringify({"id":id,"name":eItem.textContent}));
+  window.location.href = window.location.origin + '/caegory.html'
+}
