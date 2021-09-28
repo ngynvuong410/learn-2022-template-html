@@ -1,14 +1,14 @@
 export const url = {
-  "shop": "http://localhost:3000/shop",
-  "menu": "http://localhost:3000/menu",
-  "slider": "http://localhost:3000/slider",
-  "poster": "http://localhost:3000/poster",
-  "products": "http://localhost:3000/products",
-  "nesw": "http://localhost:3000/news",
-  "Carts": "http://localhost:3000/carts/",
-  "users": "http://localhost:3000/users/",
-  "evaluates": "http://localhost:3000/evaluates/",
-  "country": "http://localhost:3000/vietnam/"
+  "shop": "https://toto-shop.herokuapp.com/shop",
+  "menu": "https://toto-shop.herokuapp.com/menu",
+  "slider": "https://toto-shop.herokuapp.com/slider",
+  "poster": "https://toto-shop.herokuapp.com/poster",
+  "products": "https://toto-shop.herokuapp.com/products",
+  "nesw": "https://toto-shop.herokuapp.com/news",
+  "Carts": "https://toto-shop.herokuapp.com/carts/",
+  "users": "https://toto-shop.herokuapp.com/users/",
+  "evaluates": "https://toto-shop.herokuapp.com/evaluates/",
+  "country": "https://toto-shop.herokuapp.com/vietnam/"
 
 }
 export const getData = function (url) {
